@@ -1,0 +1,51 @@
+@import url(../css/index.css);
+
+/*공통*/
+#sub_contents{
+    width: 80%;
+    margin: 0 auto;
+}
+#sub_contents h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/**/
+#sub_1st{
+    margin-top: 80px;
+    z-index: -1;
+}
+#sub_1st>div{
+    background: bisque;
+    padding: 30px 30px;
+    font-size: 0.9rem;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+/**/
+#sub_2nd{
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+#sub_2nd>p{
+    font-size: 0.9rem;
+    line-height: 30px;
+}
+/**/
+#sub_3th>div>p{
+    font-size: 0.9rem;
+    line-height: 40px;
+}
+#sub_3th>div>img{
+    width: 30%; height: 30%;
+    margin-left: 50px;
+}
+#sub_contents>hr{
+    background: #aaa;
+    border: 0;
+    height: 1px;
+    margin: 100px 0;
+}

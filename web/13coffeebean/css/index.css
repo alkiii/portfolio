@@ -1,0 +1,294 @@
+@charset "utf-8";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
+
+/*공통*/
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color: #333;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+.widewrap{
+    width: 80%;
+    margin: 0 auto;
+}
+h4{
+    text-align: center;
+    margin: 60px auto;
+    color: #EBA826;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/*헤더 영역*/
+#util{
+    height: 50px;
+    background: #ccc;
+}
+#util>ul{
+    display: flex;
+    justify-content: end;
+}
+#util>ul li{
+    margin-right: 30px;
+    font-size: 0.9rem;
+    line-height: 50px;
+    font-weight: 600;
+}
+#util>ul li a{color: #999;}
+#util>ul>li:last-child{
+    background: url('../img/bean.jpg') no-repeat;
+    width: 74px; height: 50px;
+}
+#nav{
+    height: 120px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+#logo{
+    display: block;
+    background: url('../img/logo.png') no-repeat;
+    width: 70px; height: 70px;
+	overflow:hidden;
+	text-indent:-9999px;
+    margin-top: 25px;
+}
+#nav>ul{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-right: 100px;
+}
+#nav>ul li{
+    line-height: 60px;
+    padding-top: 30px;
+}
+#nav>ul li a:after{
+    display: block;
+    content: '';
+    border-bottom: 3px solid #60453C;
+    transform: scaleX(0) translateY(-50%);
+    transition: transform 250ms ease-in-out; 
+}
+#nav>ul li:hover a:after{transform: scaleX(1);}
+
+#nav>ul li a{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/*비주얼 배너 영역*/
+#bnn01{
+    height: 540px;
+    background: url('../img/banner1.jpg') no-repeat center;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+#bnn02{
+    height: 400px;
+    background: url('../img/banner2.jpg') no-repeat center;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+
+/*md's 픽 영역*/
+
+#md>ul{
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: 0 auto;
+}
+#md>ul li{text-align: center;}
+#md>ul li ul li:nth-of-type(1) img{
+    width: 100%; height: 100%;
+}
+#md>ul li ul li:nth-of-type(2){
+    font-weight: 600;
+    margin: 10px auto;
+    font-size: 1.1rem;
+}
+.price{
+    color: #EBA826;
+    font-size: 0.9rem;
+    margin-bottom: 70px;
+    margin-top: 10px;
+}
+
+/*What's new 영역*/
+#wn>ul{
+    width: 75%;
+    margin: 0 auto;
+}
+#wn>ul li ul li:nth-of-type(1) img{
+    width: 90%; height: 90%;
+}
+#wn>ul li ul{text-align: center;}
+
+/*갤러리 영역*/
+#gallery{
+    margin-top: 140px;
+    background-color: #81007F;
+    padding-bottom: 20px;
+}
+#gallery>h5{
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding: 50px 0 20px 0;
+    margin-top: 20px;
+}
+
+/*
+.photo_list{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.photo_list li{
+    width: 16.66666666666667%;
+}*/
+.photo_list{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    width: 1440px; height: 480px;
+    margin: 0 auto;
+    
+}
+.photo_list img{width:100%; max-width:100%; height: 240px;}
+.photo_list li{
+    width:240px; height:240px;
+} /*플렉스아이템*/
+
+.photo_list>li a{
+    display:block;
+    width:100%; height:100%;
+    position:relative;
+}
+.photo_list>li a::after{ /*배경*/
+    content:'';
+    display:block;
+    width:100%; height:100%;
+    position: absolute;
+    background: #81007F;
+    opacity: 0;
+    transition: all .4s;
+    z-index: 999;
+    left:0; top:0;
+}
+.photo_list>li:hover a::after{opacity: 0.6;}
+.photo_list>li:hover .info{
+    opacity: 1;
+    transform: translateY(30px);
+}
+.info{
+    z-index: 9999;
+    position: absolute;
+    top:0; left:5%;
+    opacity: 0;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all .4s;
+}
+.info h4{font-size: 1.5rem; margin:20px 0;}
+#gallery>span{
+    display: block;
+    text-align: center;
+    margin: 60px auto;
+    background: #EBA826;
+    color: #fff;
+    width: 450px; height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+/*footer 영역*/
+
+footer{background-color: #E2E2E2;}
+footer>div:first-of-type{
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0 30px 0;
+    justify-content: space-between;
+}
+
+footer>div ul li{
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+footer>div:first-of-type ul li a{color: #60453C;}
+footer>div:first-of-type ul li a:hover{color: #c97f00;}
+.ft_title{
+    color: #c97f00;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+footer>hr{
+    width: 80%;
+    margin-bottom: 40px;
+    background: #60453C;
+    height: 1px;
+    border: 0;
+}
+footer>div:last-of-type{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer>div:last-of-type>ul>li:first-child>ul{
+    display: flex;
+    justify-content: left;
+}
+footer>div:last-of-type>ul>li:first-child>ul li{
+    border-right: 1px solid #60453C;
+    padding-right: 15px;
+    margin-left: 15px;
+}
+footer>div:last-of-type>ul>li:first-child>ul li a{
+    font-size: 0.7rem;
+    color: #60453C;
+}footer>div:last-of-type>ul>li:first-child>ul li a:hover{
+    font-size: 0.7rem;
+    color: #c97f00;
+}
+footer>div:last-of-type>ul>li:first-child>ul>li:first-child{margin-left: 0;}
+footer>div:last-of-type>ul>li:first-child>ul>li:last-child{border-right: 0;}
+
+footer>div:last-of-type>ul>li:last-child>p{
+    font-size: 0.7rem;
+    color: #60453C;
+    line-height: 23px;
+}
+#sns_icon>li:nth-of-type(1){
+    display: block;
+    width: 52px; height: 52px;
+    background: url('../img/sns_01.png') no-repeat;
+}
+#sns_icon>li:nth-of-type(2){
+    display: block;
+    width: 52px; height: 52px;
+    background: url('../img/sns_02.png') no-repeat;
+}
+#sns_icon>li:nth-of-type(3){
+    display: block;
+    width: 52px; height: 52px;
+    background: url('../img/sns_03.png') no-repeat;
+}
+#sns_icon>li:nth-of-type(4){
+    display: block;
+    width: 52px; height: 52px;
+    background: url('../img/sns_04.png') no-repeat;
+    margin-right: 0;
+}
+#sns_icon li{margin-right: 10px;}

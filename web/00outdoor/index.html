@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <title>new</title>
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header>
+    <div>
+        <ul id="util" class="flex wrapper">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </div>
+    <div>
+        <h1 id="logo"><a href="#">logo</a></h1>
+    </div>
+    <nav>
+        <ul id="nav" class="flex wrapper">
+            <li class="main"><a href="#">MENU 01
+                <ul class="sub">
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#">MENU 01
+                <ul class="sub">
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#">MENU 01
+                <ul class="sub">
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#">MENU 01
+                <ul class="sub">
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#">MENU 01
+                <ul class="sub">
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                    <li><a href="#">SUB_MENU</a></li>
+                </ul>
+            </a></li>
+        </ul>
+    </nav>
+</header>
+<script>
+    $(document).ready(function(){
+        $("#nav>li").hover(function(){
+            $(this).children(".sub").stop().slideDown();
+        },function(){
+            $(this).children(".sub").stop().slideUp();
+        })
+    });
+</script>
+<section>
+    <div id="wrapper" class="wrapper">
+        <div class="bxslider">
+            <div>
+              <img src="./images/visual_banner.png" title="슬라이더1번">
+            </div>
+            <div>
+              <img src="./images/visual_banner.png" title="슬라이더2번">
+            </div>
+            <div>
+              <img src="./images/visual_banner.png" title="슬라이더3번">
+            </div>
+            <div>
+                <img src="./images/visual_banner.png" title="슬라이더4번">
+            </div>
+        </div>
+    </div>
+</section>
+<script src="./js/jquery.bxslider.js"></script>
+<script>
+	/*스크립트*/
+		$(".bxslider").bxSlider({
+			auto: true,
+ 			 autoControls: false,
+  			stopAutoOnClick: true,
+ 			 pager: true,
+  			slideWidth: 1440
+		})
+	</script>
+<section id="focus">
+    <div class="wrap">
+        <div class="title">
+            <h2>FOCUS NOW</h2>
+            <div class="underbar">&nbsp;</div>
+        </div>
+        <div>
+            <ul id="circleprd" class="flex wrap">
+                <li><a href="#">
+                    <ul>
+                        <li><img src="./images/circle_img01.png" alt="prd"/></li>
+                        <li>다운</li>
+                    </ul>
+                </a></li>
+                <li><a href="#">
+                    <ul>
+                        <li><img src="./images/circle_img02.png" alt="prd"/></li>
+                        <li>여성</li>
+                    </ul>
+                </a></li>
+                <li><a href="#">
+                    <ul>
+                        <li><img src="./images/circle_img03.png" alt="prd"/></li>
+                        <li>후디</li>
+                    </ul>
+                </a></li>
+                <li><a href="#">
+                    <ul>
+                        <li><img src="./images/circle_img04.png" alt="prd"/></li>
+                        <li>폴로</li>
+                    </ul>
+                </a></li>
+                <li><a href="#">
+                    <ul>
+                        <li><img src="./images/circle_img05.png" alt="prd"/></li>
+                        <li>바지</li>
+                    </ul>
+                </a></li>
+                <li><a href="#">
+                    <ul>
+                        <li><img src="./images/circle_img06.png" alt="prd"/></li>
+                        <li>침낭</li>
+                    </ul>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="wrap">
+        <div class="title">
+            <h2>SEARCH</h2>
+            <div class="underbar">&nbsp;</div>
+        </div>
+        <div id="search">
+            <div>
+                <h3>상품명</h3>
+                <input type="text" uid="search" size="10" placeholder="상품명 검색">
+                <ul class="flex">
+                    <li><a href="#">후리스</a></li>
+                    <li><a href="#">트레이닝자켓</a></li>
+                    <li><a href="#">여름점퍼</a></li>
+                    <li><a href="#">반팔티</a></li>
+                    <li><a href="#">기능성</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>카테고리</h3>
+                <select>
+                    <option>전체</option>
+                    <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                </select>
+            </div>
+            <div>
+                <h3>용도</h3>
+                <select>
+                    <option>전체</option>
+                    <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                        <option>옷옷옷</option>
+                </select>
+            </div>
+            <div>
+                <h3>색상</h3>
+                <ul id="color" class="flex">
+                    <li><div>&nbsp;</div></li>
+                    <li><div>&nbsp;</div></li>
+                    <li><div>&nbsp;</div></li>
+                    <li><div>&nbsp;</div></li>
+                    <li><div>&nbsp;</div></li>
+                    <li><div>&nbsp;</div></li>
+                    <li><div>&nbsp;</div></li>
+                </ul>
+            </div>
+            <button>검색하기</button>
+        </div>
+        
+    </div>
+</section>
+<section >
+    <div class="wrap">
+        <div class="title">
+            <h2>BEST PRODUCT</h2>
+            <div class="underbar">&nbsp;</div>
+        </div>
+        <ul id="bestprd" class="flex">
+            <li><a href="#">
+                <ul>
+                    <li><img src="./images/best_img01.png" alt="best_prd" /></li>
+                    <li class="top"><span>Top 1</span></li>
+                </ul>
+            </a></li>
+            <li><a href="#">
+                <ul>
+                    <li><img src="./images/best_img02.png" alt="best_prd" /></li>
+                    <li class="top"><span>Top 2</span></li>
+                </ul>
+            </a></li>
+            <li><a href="#">
+                <ul>
+                    <li><img src="./images/best_img03.png" alt="best_prd" /></li>
+                    <li class="top"><span>Top 3</span></li>
+                </ul>
+            </a></li>
+            <li><a href="#">
+                <ul>
+                    <li><img src="./images/best_img04.png" alt="best_prd" /></li>
+                    <li class="top"><span>Top 4</span></li>
+                </ul>
+            </a></li>
+            <li><a href="#">
+                <ul>
+                    <li><img src="./images/best_img05.png" alt="best_prd" /></li>
+                    <li class="top"><span>Top 5</span></li>
+                </ul>
+            </a></li>
+            <li><a href="#">
+                <ul>
+                    <li><img src="./images/best_img06.png" alt="best_prd" /></li>
+                    <li class="top"><span>Top 6</span></li>
+                </ul>
+            </a></li>
+        </ul>
+    </div>
+</section>
+<section id="bottombanner">
+    <ul class="flex wrapper">
+        <li><a href="#"><img src="./images/bottom_banner01.png" alt="banner"/></a></li>
+        <li><a href="#"><img src="./images/bottom_banner02.png" alt="banner"/></a></li>
+    </ul>
+</section>
+<footer>
+    <div id="ft_uppper">
+        <ul class="flex wrapper">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">고객지원실</a></li>
+            <li><a href="#">브랜드스토리</a></li>
+        </ul>
+    </div>
+    <div id="ft_bottom" >
+        <div class="flex wrapper">
+            <div>
+                <ul id="ft_text">
+                    <li><p>BRAND</p></li>
+                    <li><p>
+                        대표명 : 대표이름 &nbsp; 책임자명 : 책임자 | 사업자번호 : 110-00-02000<br/>
+                        통신판매신고번호 : 2000-어쩌구저-0000<br/>
+                        이름도 아름답군 만지면 기쁘리(블라동 블라블라 1동) | 고객센터 1515-1155
+                    </p></li>
+                    <li><p>COPYRIGHT(c)2022 BRAND OUTDOOR CORPORATION ALL RIGHT RESERVED.</p></li>
+                </ul>
+            </div>
+            <div id="ft_sns">
+                <ul class="flex">
+                    <li><a href="#"><img src="./images/sns_youtube.png" alt="sns" /></a></li>
+                    <li><a href="#"><img src="./images/sns_kakao.png" alt="sns" /></a></li>
+                    <li><a href="#"><img src="./images/sns_insta.png" alt="sns" /></a></li>
+                    <li><a href="#"><img src="./images/sns_naver.png" alt="sns" /></a></li>
+                    <li><a href="#"><img src="./images/sns_kakaooo.png" alt="sns" /></a></li>
+                    <li><a href="#"><img src="./images/sns_facebook.png" alt="sns" /></a></li>
+                </ul>
+                <p>고객센터 <span>070-0000-0000</span></p>
+                <p>(월-금 09:00-20:00)</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

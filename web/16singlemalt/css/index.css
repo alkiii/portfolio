@@ -1,0 +1,291 @@
+@charset "utf-8";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@import url('../css/common.min.css');
+
+/*공통*/
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color: #333;
+}
+.wrap{
+    width: 80%;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1,h2{
+    display:none;
+	visibility:hidden;
+	width:0; height:0;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+
+/*헤더 영역*/
+
+#util{
+    background-color: #918B8D;
+    height: 30px;
+    position: relative;
+}
+#util>ul{
+    justify-content: end;
+}
+#util>ul>li:nth-child(3){
+    width: 30px; height: 30px;
+    background: url('../images/search.png') no-repeat;
+    background-size: 70% 70%;
+    margin-top: 4px;
+    margin-right: 0;
+}
+#util>ul li{
+    line-height: 30px;
+    margin-right: 60px;
+}
+#util>ul li a{
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+nav{
+    height: 65px;
+    border-bottom: 1px solid saddlebrown;
+    z-index: 9999999;
+}
+#nav li,
+.sub li{
+    line-height: 65px;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    z-index: 999999;
+}
+#nav li a,
+.sub li a{display: block;}
+.sub li a{
+    width: 100%; height: 100%;
+    z-index: 9999999;
+    background: #fff;
+}
+#nav>li:last-child{margin-top: 4px;}
+.sub{
+    width: 100%;
+    z-index: 99999;
+    border: 1px solid saddlebrown;
+    display: none;
+}
+
+.sub li:hover a{
+    background: #918B8D;
+}
+
+
+#search{
+    position: absolute;
+    display: none;
+    z-index: 9999999;
+    width: 80%; height: 200px;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 30px;
+}
+#search>input{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+input{
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #000;
+    color: #fff;
+}
+#search>div:first-of-type{
+    background: url('../images/close.png') no-repeat;
+    width: 50px; height: 50px;
+    position: absolute;
+    right: 10px; top: 10px;
+}
+#search>div:last-of-type{
+    background: url('../images/search.png') no-repeat;
+    width: 35px; height: 35px;
+    position: absolute;
+    left: 68%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+#search>div:first-of-type>a{
+    display: block;
+    width: 100%; height: 100%;
+}
+#search_icon{
+    display: block;
+    width: 100px ; height: 100px;
+}
+/*비주얼 배너 영역*/
+.jd-slider{z-index: 2;}
+.slide-inner{
+    height: 25%;
+    margin-top: 50px;
+    z-index: 1;
+}
+.slide-area>li:nth-child(1)>a>div{
+    background: url('../images/visual_bn01.jpg') no-repeat;
+}
+.jd-slider .prev{left: 13%;}
+.jd-slider .next{right: 13%;}
+
+/*프리미엄 상품*/
+#pre_prd{padding-top: 100px;}
+#pre_prd ul li img{width: 100%; height: auto;}
+#pre_prd ul{margin-right: 10px;}
+#pre_prd>ul:last-child{margin-right: 0;}
+
+.photo_list>li:first-of-type a{
+    display:block;
+    width:100%; height:100%;
+    position:relative;
+}
+.photo_list>li:first-of-type a::after{ /*배경*/
+    content:'';
+    display:block;
+    width:100%; height:97%;
+    position: absolute;
+    background: #333;
+    opacity: 0;
+    transition: all .4s;
+    z-index: 999;
+    left:0; top:0;
+}
+.photo_list>li:first-of-type:hover a::after{opacity: 0.6;}
+.photo_list>li:first-of-type:hover .info{
+    opacity: 1;
+    transform: translateY(30px);
+}
+.info{
+    z-index: 9999;
+    position: absolute;
+    top:15%; left:15%;
+    opacity: 0;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all .4s;
+}
+
+/*맥캘란*/
+#mac{
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 1440px;
+}
+#mac>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+#mac>div>ul>li:first-child,
+#mac>div>ul>li:last-child{margin-left: 150px;}
+#mac>div>ul>li:first-child{margin-bottom: 30px;}
+#mac>div>ul img{border: 1px solid #aaa;}
+#mac>div>ul>li ul{
+    width: 100%; height: auto;
+    margin-right: 65px;
+    text-align: center;
+    align-items: center;
+}
+#mac>div>ul>li:first-child>ul:last-child,
+#mac>div>ul>li:last-child>ul:last-child{margin-right: 0;}
+
+#mac>div>ul>li ul span{font-weight: bold;}
+#mac>div>ul>li ul hr{
+    background: #aaa;
+    height: 1px;
+    border: 0;
+}
+#mac>div>ul>li ul li{cursor: pointer;}
+#mac>div>ul>li ul li:hover img{
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+/*glenmorangie리스트*/
+#glen{
+    padding-top: 150px;
+    margin: 0 auto;
+    width: 1440px;
+}
+#glen>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+#glen>div>ul>li:first-child,
+#glen>div>ul>li:last-child{margin-left: 150px;}
+#glen>div>ul>li:first-child{margin-bottom: 30px;}
+#glen>div>ul img{border: 1px solid #aaa;}
+#glen>div>ul>li ul{
+    width: 100%; height: auto;
+    margin-right: 65px;
+    text-align: center;
+    align-items: center;
+}
+#glen>div>ul>li:first-child>ul:last-child,
+#glen>div>ul>li:last-child>ul:last-child{margin-right: 0;}
+
+#glen>div>ul>li ul span{font-weight: bold;}
+#glen>div>ul>li ul hr{
+    background: #aaa;
+    height: 1px;
+    border: 0;
+}
+#glen>div>ul>li ul li{cursor: pointer;}
+#glen>div>ul>li ul li:hover img{
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+/*footer*/
+.line{
+    border: 1px dotted #aaa;
+    width: 1440px;
+    margin: 100px auto;
+}
+
+footer{
+    background-color: #918B8D;
+    height: 250px;
+}
+#ft ul{
+    padding-top: 50px;
+}
+#ft a{
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+#ft ul li{
+    margin-bottom: 10px;
+}
+#ft>ul:nth-child(3)>li{
+    width: 20px; height: 20px;
+    background: url('../images/sns.png') no-repeat;
+    text-indent: 25px;
+}
+#ft>ul:nth-child(3)>li:first-child{
+    background-image: none;
+    text-indent: 0;
+}
+#ft>ul:nth-child(3)>li:nth-child(3){background-position: 0 -20px;}
+#ft>ul:nth-child(3)>li:nth-child(4){background-position: 0 -40px;}
+#ft>ul:nth-child(3)>li:nth-child(5){background-position: 0 -60px;}
+#ft>ul p{
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding-top: 100px;    
+}

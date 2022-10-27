@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>single malts</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css">
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header>
+    <div id="util" >
+        <h1>유틸영역</h1>
+        <ul class="flex wrap">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li ><a href="#" id="search_icon">&nbsp;</a></li>
+            <div id="search">
+                <input type="text" name="search" size="50" placeholder="검색어를 입력 하세요"/>
+                <div><a href="#" class="close">&nbsp;</a></div>
+                <div>&nbsp;</div>
+            </div>
+        </ul>
+        
+    </div>
+    <nav>
+        <h2>글로벌네비게이션</h2>
+        <ul id="nav" class="flex wrap">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="#">cocktails</a></li>
+            <li><a href="#">knowledge</a>
+                <ul class="sub">
+                    <li><a href="./sub.html">single malt</a></li>
+                    <li><a href="#">history</a></li>
+                </ul>
+            </li>
+            <li><a href="#">shop</a>
+                <ul class="sub">
+                    <li><a href="#">whisky</a></li>
+                    <li><a href="#">glass</a></li>
+                </ul>
+            </li>
+            <li><a href="#">promotion</a>
+                <ul class="sub">
+                    <li><a href="#">expert blog</a></li>
+                    <li><a href="#">malt master</a></li>
+                    <li><a href="#">recent news</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="./images/logo.png" alt="logo" /></a></li>
+        </ul>
+    </nav>
+    <script>
+        $(document).ready(function(){
+            $("#nav>li").hover(function(){
+                $(this).children(".sub").stop().slideDown();
+            },function(){
+                $(this).children(".sub").stop().slideUp();
+            });
+            $("#search_icon").click(function(){
+                $("#search").slideToggle();
+            });
+            $(".close").click(function(){
+                $("#search").slideUp();
+            });
+        });
+    </script>
+</header>
+<section class="jd-slider slider2"><!--비주얼 배너 영역-->
+    <h2>비주얼배너영역</h2>
+    <div class="slide-inner wrap">
+        <ul class="slide-area">
+            <li>
+                <a href="#"><img src="./images/visual_bn01.jpg" alt="bnr"/></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/visual_bn02.jpg" alt="bnr"/></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/visual_bn03.jpg" alt="bnr"/></a>
+            </li>
+        </ul>
+        <a class="prev" href="#">
+            <i class="fas fa-angle-left fa-2x"></i>
+        </a>
+        <a class="next" href="#">
+            <i class="fas fa-angle-right fa-2x"></i>
+        </a>
+    </div>
+    <div class="controller">
+        <a class="auto" href="#">
+            <i class="fas fa-play fa-xs"></i>
+            <i class="fas fa-pause fa-xs"></i>
+        </a>
+        <div class="indicate-area"></div>
+    </div>
+</section>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.jdSlider-latest.min.js"></script>
+    <script>
+        window.onload = function () {
+		/*스크립트*/
+            $(".slider2").jdSlider({
+                wrap:'.slide-inner',
+                isAuto:true,
+                isLoop:true,
+                speed:1500,
+                interval:5000
+            });
+        };
+    </script>
+<section>
+    <h2>프리미엄상품영역</h2>
+    <div id="pre_prd" class="flex wrap">
+        <ul class="photo_list">
+            <li><a href="#">
+                <img src="./images/premium_bn01.jpg" alt="prd"/>
+                <div class="info">
+                    <span>Glenfiddich 50Y 70CL<br/>
+                    £ 24,000.00</span>
+            </div>
+            </a>
+        </ul>
+        <ul class="photo_list">
+            <li><a href="#">
+                <img src="./images/premium_bn02.jpg" alt="prd"/>
+                <div class="info">
+                    <span>Glenfiddich 50Y 70CL<br/>
+                    £ 24,000.00</span>
+            </div>
+            </a>
+        </ul>
+        <ul class="photo_list">
+            <li><a href="#">
+                <img src="./images/premium_bn03.jpg" alt="prd"/>
+                <div class="info">
+                    <span>Glenfiddich 50Y 70CL<br/>
+                    £ 24,000.00</span>
+            </div>
+            </a>
+        </ul>
+        <ul class="photo_list">
+            <li><a href="#">
+                <img src="./images/premium_bn04.jpg" alt="prd"/>
+                <div class="info">
+                    <span>Glenfiddich 50Y 70CL<br/>
+                    £ 24,000.00</span>
+            </div>
+            </a>
+        </ul>
+    </div>
+</section>
+<section>
+    <h2>macallan리스트</h2>
+    <div id="mac">
+        <div class="flex">
+            <div>
+                <h3>macallan</h3>
+                <img src="./images/macallan.jpg" alt="mac"/>
+            </div>
+            <ul>
+                <li class="flex">
+                    <ul>
+                        <li>
+                            <img src="./images/product_01.jpg" alt="prd"/>
+                            <p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span>
+                            <hr/>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_01.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_01.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                </li>
+                <li class="flex">
+                    <ul>
+                        <li><img src="./images/product_01.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_01.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_01.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>glenmorangie리스트</h2>
+    <div id="glen">
+        <div class="flex">
+            <div>
+                <h3>macallan</h3>
+                <img src="./images/glenmorangie.jpg" alt="mac"/>
+            </div>
+            <ul>
+                <li class="flex">
+                    <ul>
+                        <li>
+                            <img src="./images/product_02.jpg" alt="prd"/>
+                            <p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span>
+                            <hr/>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_02.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_02.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                </li>
+                <li class="flex">
+                    <ul>
+                        <li><img src="./images/product_02.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_02.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                    <ul>
+                        <li><img src="./images/product_02.jpg" alt="prd"/></li>
+                        <li><p>THE MACALLAN RUBY 70CL</p>
+                            <span>£ 225.00</span></li>
+                            <hr/>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<hr class="line"/>
+<footer>
+    <div id="ft" class="flex wrap">
+        <ul>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">THE STORY</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">PRIVACY&COOKIE POLICY</a></li>
+            <li><a href="#">TERMS&CONDITIONS</a></li>
+            <li><a href="#">SHOPPING</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">FOLLOW&nbsp;US</a></li>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">youtube</a></li>
+        </ul>
+        <ul>
+            <li><p>Copyrightⓒ 2020 SMW. all right reserved.</p></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
