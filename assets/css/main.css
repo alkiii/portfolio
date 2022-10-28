@@ -1621,6 +1621,7 @@ input, select, textarea {
     font-size: 1.3rem;
     transition: all .4s;
 	font-weight: 600;
+	text-shadow: 0px 0px 5px #333;
 }
 .info span{
 	margin-right: 20px;
