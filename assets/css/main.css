@@ -2089,7 +2089,8 @@ input, select, textarea {
 						object-position: center;
 					}
 
-					#main > .panel.intro .pic .arrow {
+					#main > .panel.intro .pic .arrow, 
+					#whoami .arrow {
 						display: block;
 						position: absolute;
 						right: 0;
@@ -2110,18 +2111,21 @@ input, select, textarea {
 						transition: width .15s ease-in-out, padding-right .15s ease-in-out;
 					}
 
-						#main > .panel.intro .pic .arrow:before {
+						#main > .panel.intro .pic .arrow:before,
+						#whoami .arrow:before {
 							position: relative;
 							padding-right: 0;
 							top: 0.125em;
 						}
 
-						#main > .panel.intro .pic .arrow span {
+						#main > .panel.intro .pic .arrow span, 
+						#whoami .arrow span{
 							display: block;
 							text-indent: -9999px;
 						}
 
-					#main > .panel.intro .pic:hover .arrow {
+					#main > .panel.intro .pic:hover .arrow, 
+					#whoami .pic:hover .arrow {
 						width: 3em;
 						padding-right: 0.25em;
 					}
